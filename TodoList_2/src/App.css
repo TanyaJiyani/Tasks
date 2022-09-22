@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 50%;
+  margin: auto;
+}
+
+.todo {
+  margin: 10%;
+  height: 200px;
+  position: relative;
+  text-align: center;
+}
+
+.todoform {
+  border-radius: 5px;
+  box-shadow: rgb(255 102 102 / 20%) 0px 2px 8px 0px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.todoform input {
+  width: 70%;
+  border-radius: 6px;
+  border: 1px solid grey;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.todoform button {
+  padding: 5px;
+  border-radius: 5px;
+  border: 5px double white;
+  margin: 10px;
+  background: #141470;
+  color: white;
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  height: 50vh;
+  overflow-y: auto;
+
+}
+
+.todotask {
+  margin: 10px;
+  display: inline-flex;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background: #ded7d7;
+  border: 4px double white
+}
+
+.todotask input {
+  border-radius: 6px;
+  border: 1px solid white;
+  padding: 15px;
+  margin: 2px
+}
+
+.todo-label {
+  float: left;
+  width: 50%;
+  margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo-func {
+  float: right;
+  width: 50%;
+  margin: auto;
+}
+
+.todo-func button {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 5px double white;
+  background: #742e72;
+  color: white;
+  width: fit-content;
+}
+
+.todo-func button:disabled {
+  background: #c2c2c2;
+}
