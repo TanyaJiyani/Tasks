@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  font-style: oblique;
+  font-family: cursive;
+}
+
+.App input {
+  padding: 1rem;
+  width: 50%;
+  background: #fff4f4;
+  border: 2px double #c2c2c2;
+  border-radius: 10px;
+}

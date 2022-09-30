@@ -18,7 +18,7 @@ function App() {
 
       <button onClick={() => setCount(count + 1)} data-testid='check-btn'>{label ? 'Click to add' : 'Click to Display'}</button>
 
-      <p>Note : Label will be displayed after First Render</p>
+      <p>Note : Label will be displayed after Click (First Render)</p>
     </div>
   );
 }

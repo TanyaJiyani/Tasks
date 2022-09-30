@@ -40,6 +40,10 @@
   color: white;
 }
 
+.todoform button:disabled {
+  background: #dadaf0;
+}
+
 .todoList {
   display: flex;
   flex-direction: column;
@@ -90,5 +94,5 @@
 }
 
 .todo-func button:disabled {
-  background: #c2c2c2;
+  background: #e6d0e5;
 }

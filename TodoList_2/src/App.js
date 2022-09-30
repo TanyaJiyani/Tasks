@@ -3,6 +3,14 @@ import './App.css';
 import TodoInput from './components/todoInput';
 import TodoList from './components/todoList';
 
+const debounce = (callback, delay) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => callback(...args), delay);
+  };
+};
+
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -25,7 +33,7 @@ export default class App extends Component {
   addTodo = () => {
     if (this.state.inputTask === "") return;
     const id = this.state.todoList.length
-    const newTodo = { id: id, label: this.state.inputTask }
+    const newTodo = { id: id, label: this.state.inputTask?.trim() }
     this.setState((state) => ({
       todoList: [...state.todoList, newTodo],
       inputTask: ''
@@ -56,11 +64,14 @@ export default class App extends Component {
     })
   }
 
-  handleEditTodo = (e) => {
+  handleEdit = (e) => {
+    console.log("IN EDIT")
     this.setState((state) => ({
       editData: { ...state.editData, editLabel: e.target.value }
     }))
   }
+
+  handleEditTodo = debounce(this.handleEdit, 1000)
 
   render() {
     return (
@@ -69,14 +80,15 @@ export default class App extends Component {
           <h1>Todo List</h1>
           <TodoInput inputTask={this.state.inputTask} handleInputChange={this.handleInputChange} handleClick={this.addTodo} />
           <div className="todoList" data-testid='todo-list'>
-            {this.state.todoList?.map((todo, key) => (
-              <TodoList todo={todo} key={key} editData={this.state.editData} removeTodo={this.removeTodo} editTodo={this.editTodo} handleEditTodo={this.handleEditTodo} updateTodo={this.updateTodo} />
-            ))}
+
+            {this.state.todoList?.length > 0 && <TodoList todoList={this.state.todoList} editData={this.state.editData} removeTodo={this.removeTodo} editTodo={this.editTodo} handleEditTodo={this.handleEditTodo} updateTodo={this.updateTodo} />}
+
           </div>
         </div>
       </div>
     )
   }
 }
+
 
 
