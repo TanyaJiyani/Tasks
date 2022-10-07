@@ -1,0 +1,67 @@
+.user-component {
+    text-align: center;
+    font-family: cursive;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px 0px
+}
+
+.user-component p {
+    font-style: oblique;
+    font-size: 2rem;
+}
+
+.user-style {
+    display: flex;
+}
+
+.user-style img {
+    max-width: 500px;
+    height: 170px;
+    width: auto;
+    margin-right: 2rem;
+}
+
+.user-style button {
+    position: absolute;
+    right: 10rem;
+    top: 7rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 5px double white;
+    margin: 10px;
+    background: #141470;
+    color: white;
+}
+
+.table-style {
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.user-style table,
+th,
+td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

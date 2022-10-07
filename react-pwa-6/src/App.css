@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 5px double white;
+  margin: 10px;
+  background: #141470;
+  color: white;
+}
+
+.mode-details {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: lightblue;
+  padding: 0.5rem;
+  margin: 10px;
+}
+
+.backbutton {
+  position: absolute;
+  right: 5rem;
+  top: 4rem;
+}
+
+.home-component {
+  margin: auto;
+}
