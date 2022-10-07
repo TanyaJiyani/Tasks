@@ -7,7 +7,7 @@ export default function home() {
         <div className='home-component'>
             <h1>Click to view more</h1>
             <Link to='/disneyCharacters'>
-                <button>DisneyCharacters</button>
+                <button>Disney Characters</button>
             </Link>
             <Link to='/users'>
                 <button>Users</button>

@@ -10,7 +10,6 @@ export default function Users() {
         let url = "https://jsonplaceholder.typicode.com/users";
         fetch(url).then((response) => {
             response.json().then((result) => {
-                console.log(result)
                 setUserData(result)
                 localStorage.setItem("userData", JSON.stringify(result))
             })
@@ -24,7 +23,7 @@ export default function Users() {
 
     const renderTableData = userData?.map(data => {
         return (
-            <tr>
+            <tr key={data.id}>
                 <td>{data.id}</td>
                 <td>{data.name}</td>
                 <td>{data.email}</td>
@@ -49,13 +48,15 @@ export default function Users() {
             </div>
             <div className='table-style'>
                 <table>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Address</th>
-                    </tr>
-                    {renderTableData}
+                    <tbody>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                        </tr>
+                        {renderTableData}
+                    </tbody>
                 </table>
             </div>
         </div>

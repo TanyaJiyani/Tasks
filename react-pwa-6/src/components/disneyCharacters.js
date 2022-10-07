@@ -31,7 +31,7 @@ export default function DisneyCharacters() {
 
     const renderMovieList = characterData?.map(char => {
         return (
-            <li>
+            <li key={char?._id}>
                 <img src={char.imageUrl} alt={char.name} />
                 <div className="overlay"><span>{char.name}</span></div>
             </li>
@@ -51,7 +51,7 @@ export default function DisneyCharacters() {
                     <>You are in Offline Mode or Some issue Occurred</> :
                     <>You are in Online Mode</>}
             </div>
-            {loading ? <div class="loader"></div> :
+            {loading ? <div className="loader"></div> :
                 <ul className="image-gallery">  {renderMovieList}</ul>
             }
         </div>
