@@ -1,0 +1,9 @@
+.cards-container {
+    display: grid;
+    justify-content: center;
+}
+
+.cards-container li {
+    margin: 2rem;
+    list-style: none;
+}

@@ -15,3 +15,5 @@ Tech Stack : React, Redux, javascript, HTML, CSS, Jest
 #Task 5 : React Debounce
 
 #Task 6 : React PWA
+
+#Task 7 : React GraphQL Integration with apollo graphql client

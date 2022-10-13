@@ -1,0 +1,43 @@
+.movies-component {
+    text-align: center;
+    font-family: cursive;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px 0px
+}
+
+.movies-component p {
+    font-style: oblique;
+    font-size: 2rem;
+}
+
+.table-style {
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.table-style table,
+th,
+td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.table-style tr:hover {
+    cursor: pointer;
+}
+
+.people-table {
+    display: inline-grid;
+}
+
+.people-table table,
+th,
+td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.people-table td {
+    padding: 10px;
+}
