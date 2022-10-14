@@ -1,3 +1,10 @@
+#Lazy Loading Included in 2 files
+
+/src/App.js (Route-based code splitting)
+/src/pages/home.js (Component Lazy Loading)
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
