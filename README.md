@@ -17,3 +17,5 @@ Tech Stack : React, Redux, javascript, HTML, CSS, Jest
 #Task 6 : React PWA
 
 #Task 7 : React GraphQL Integration with apollo graphql client
+
+#Task 8 : React Lazy Loading (Load all the routes & Components with Lazy Loading)
