@@ -1,6 +1,7 @@
 #Lazy Loading Included in 2 files
 
 /src/App.js (Route-based code splitting)
+
 /src/pages/home.js (Component Lazy Loading)
 
 ---
